@@ -39,11 +39,9 @@ public class Practice07MatrixTranslateView extends View {
         bitmap = BitmapFactory.decodeResource(getResources(), R.drawable.maps);
 
 
-//        mMatrix1.reset();
 //        mMatrix1.postTranslate(-100,-100);
 //        mMatrix2.postTranslate(200,100);
     }
-
 
 
     @Override
@@ -54,7 +52,7 @@ public class Practice07MatrixTranslateView extends View {
 
         // 使用 Matrix 前一定要reset!!!否则会出现问题
         mMatrix1.reset();
-        mMatrix1.postTranslate(-100,-100);
+        mMatrix1.postTranslate(-100, -100);
         canvas.concat(mMatrix1);
         canvas.drawBitmap(bitmap, point1.x, point1.y, paint);
         canvas.restore();
@@ -62,9 +60,9 @@ public class Practice07MatrixTranslateView extends View {
         canvas.save();
 //        canvas.concat(mMatrix2);
         mMatrix1.reset();
-        mMatrix1.postTranslate(200,100);
+        mMatrix1.postTranslate(200, 100);
         canvas.concat(mMatrix1);
         canvas.drawBitmap(bitmap, point2.x, point2.y, paint);
         canvas.restore();
-        }
-        }
+    }
+}
